@@ -1,8 +1,6 @@
 import os
 import dj_database_url
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -57,6 +55,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
