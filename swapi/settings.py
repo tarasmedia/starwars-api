@@ -56,10 +56,6 @@ DATABASES = {
     }
 }
 
-
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_ETAGS = True
