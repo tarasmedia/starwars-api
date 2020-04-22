@@ -1,6 +1,9 @@
 import os
 import dj_database_url
 
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 SECRET_KEY = os.environ.get(
